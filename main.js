@@ -14,4 +14,33 @@ document.addEventListener('DOMContentLoaded', () => {
         promptsBody.style.display = "none";
         paymentContainer.style.display = "none";
     })
+
+
+    // counter
+    const basePrice = 500;
+    let count = document.querySelector('#count');
+    let countValue = parseInt(count.textContent);
+    const incrementCount = document.querySelector('#incrementCount');
+    const decrementCount = document.querySelector('#decrementCount');
+
+    incrementCount.addEventListener('click', () => {
+        countValue++;
+        count.textContent = countValue;
+        updateTotal(countValue * basePrice);
+    })
+
+    decrementCount.addEventListener('click', () => {
+        if(countValue > 1){
+            countValue--;
+            count.textContent = countValue;
+            updateTotal(countValue * basePrice);
+        }
+    })
+
+    const updateTotal = (value) => {
+        const totalPrice = document.querySelector('#totalPrice')
+        totalPrice.textContent = value;
+    }
+
+
 })

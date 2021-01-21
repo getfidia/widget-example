@@ -65,7 +65,7 @@ button:focus{
 
 
 #promptsBody{
-    display: none;
+    /* display: none; */
     position: absolute;
     overflow-y: scroll;
     height: 100%;
@@ -119,7 +119,7 @@ button:focus{
 }
 
 #paymentContainer{
-    display: none;
+    /* display: none; */
     min-height: 800px;
     padding: 2em 0px 2em 0px;
     animation: glowIn .5s linear;

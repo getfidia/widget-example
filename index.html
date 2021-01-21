@@ -84,6 +84,8 @@
     </div>
 
     <div id="promptsBody">
+
+        <!-- Receive payment -->
         <div class="" id="paymentContainer">
             <div class="row">
                 <div class="col-10"></div>
@@ -125,15 +127,14 @@
 						</div>
 						<div class="col-4 p-0 m-0 col-md-6 d-flex justify-content-end align-items-center">
 							<div class="row p-0 m-0" id="counterBody">
-								<div class="col-4 counter d-flex justify-content-center align-items-center" 
-								@click="donationCount > 1 ? donationCount-- : 0 ">
+								<div class="col-4 counter d-flex justify-content-center align-items-center" id="decrementCount">
 									-
 								</div>
-								<div class="col-4 counted d-flex justify-content-center align-items-center">
-									0
+								<div class="col-4 counted d-flex justify-content-center align-items-center" id="count">
+									1
 								</div>
 								<div class="col-4 counter d-flex justify-content-center align-items-center" 
-								@click="donationCount++">
+								id="incrementCount">
 									+
 								</div>
 							</div>
@@ -155,7 +156,9 @@
 					</div>
 					<div class="inputField mt-3">
                         <div class="submitBtn" id="supportB">
-                            <button class="button" id="button1">Support - NGN 5000</button>
+                            <button class="button" id="button1">
+                                Support - NGN <span id="totalPrice">5000</span>
+                            </button>
                             <InputButton :text="supportText" @click.native="showPaymentPromptContainer"/>
 						</div>
 					</div>
@@ -170,6 +173,5 @@
 			</div>
 		</div>
     </div>
-
 </body>
 </html>
