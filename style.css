@@ -1,3 +1,6 @@
+* {
+    font-family: 'Work Sans';
+}
 .button {
     display: flex;
     justify-content: center;
@@ -51,4 +54,257 @@ button:focus{
     font-size: 24px;
     margin-top: .4em;
     text-align: center;
+}
+
+
+#promptsBody{
+    position: absolute;
+    overflow-y: scroll;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+#promptsBody::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Link prompt body */
+
+#fidia-decor{
+    margin-top: 36px;
+}
+
+#bgImage{
+    width: 100% !important;
+}
+
+#paymentContainer{
+    min-height: 800px;
+    padding: 2em 0px 2em 0px;
+}
+
+#paymentContainer > div{
+    width: 90%;
+    max-width: 750px;
+    margin: auto;
+}
+
+#paymentBody{
+    width: 100%;
+    min-height: 800px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    padding: 1.5em 3em 1.5em 3em;
+}
+
+#userProfileImage{
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+#usersName{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#usersRole{
+    font-size: 18px;
+    color:  #787676;
+    font-weight: 500;
+}
+
+#usersDescription{
+    font-size: 16px;
+    color:  #787676;
+    font-weight: 400;
+}
+
+#paymentQuantity{
+    height: 75px;
+}
+
+#paymentQuantity div > #item {
+    width: 75px;
+}
+
+#itemBody{
+    background: rgba(26, 27, 75, 0.09);
+    height: 71px;
+    width: 71px;
+    border-radius: 10px;
+}
+
+.itemCon{
+    float: left;
+    height: 100%;
+}
+
+#itemBody > img {
+    width: 50px;
+    height: 50px;
+}
+
+.priceInfo{
+    font-size: 20px;
+    color:  #787676;
+    font-weight: 500;
+}
+
+#counterBody{
+    width: 113px;
+    height: 37px;
+    border: 1.2px solid #787676;
+    border-radius: 3.7px;
+    background: #e4e3e3;
+    color: #787676;
+}
+
+#counterBody > .counter {
+    background: #e4e3e3;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: opaciity .5s linear;
+}
+
+#counterBody > .counter:hover {
+    opacity: 1;
+}
+
+#counterBody > .counted {
+    background: white;
+    border-right: 0.7px solid #787676;
+    border-left: 0.7px solid #787676;
+}
+
+.inputName{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.submitBtn{
+    width: 290px;
+}
+
+#supportBtn{
+    cursor: pointer;
+    color: #333333;
+    font-size: 17px;
+    font-weight: 500;
+    transition: .5s linear;
+}
+
+#supportBtn:hover{
+    opacity: 0.8;
+}
+
+#buyText{
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+}
+
+#buyText > span {
+    color:  #787676;
+}
+
+#poweredByBody{
+    height: 40px;
+    max-width: 200px;
+    margin: auto;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid #F8F8F8;
+    cursor: pointer;
+}
+
+#poweredByText{
+    color: var(--fidiaColor);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 600px){
+    .body{
+        background: url("../assets/images/bg_dots.png") var(--fidiaBodyColor);
+        background-repeat: no-repeat;
+        background-size: 100% 500px;
+        min-height: 100%;
+        width: 100%;
+    }
+
+    #paymentBody{
+        min-height: 900px;
+    }
+
+    #usersDescription{
+        text-align: center !important;
+    }
+
+    #paymentQuantity div > #item {
+        width: 45px;
+    }
+
+    .itemCon.buy {
+        width: 115px;
+    }
+
+    .priceInfo:nth-child(1){
+        padding-top: 10px;
+    }
+
+    .priceInfo{
+        font-size: 18px;
+    }
+}
+
+
+
+/* Text Input */
+
+.input{
+    background: #FAFAFA;
+    width: 100%;
+    height: 60px;
+    border: 0px solid #787676;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+    padding: 1.5em;
+    padding-left: 1.8em;
+    outline: none;
+    transition: border .1s linear;
+    transition: .3s linear;
+}
+
+.input:focus{
+    border: 1.5px solid #3a9efd;
+}
+
+.input::placeholder{
+    color: grey;
 }
