@@ -2,6 +2,11 @@
     font-family: 'Work Sans';
 }
 
+body{
+    padding-left: .3em;
+    padding-right: .3em;
+}
+
 .button {
     display: flex;
     justify-content: center;
@@ -45,6 +50,7 @@ button:focus{
     font-weight: 600;
     font-size: 36px;
     margin-top: .4em;
+    text-align: center;
 }
 
 #easyText{
