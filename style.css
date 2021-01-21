@@ -1,6 +1,7 @@
 * {
     font-family: 'Work Sans';
 }
+
 .button {
     display: flex;
     justify-content: center;
@@ -58,6 +59,7 @@ button:focus{
 
 
 #promptsBody{
+    display: none;
     position: absolute;
     overflow-y: scroll;
     height: 100%;
@@ -70,6 +72,23 @@ button:focus{
 
 #promptsBody::-webkit-scrollbar {
     display: none;
+}
+
+#cancelIcon{
+    width: 30px;
+    height: 30px;
+    background: white;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+#cancelIcon:hover{
+    opacity: 0.8;
+    transition: all .5s linear;
 }
 
 
@@ -94,8 +113,16 @@ button:focus{
 }
 
 #paymentContainer{
+    display: none;
     min-height: 800px;
     padding: 2em 0px 2em 0px;
+    animation: glowIn .5s linear;
+}
+
+@keyframes glowIn{
+    from {
+        opacity: 0;
+    }
 }
 
 #paymentContainer > div{
